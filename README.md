@@ -3,7 +3,23 @@
 
 ## Example picture
 
+Unknown data will graph grey. Calls are green. Sessions (2 Sessions are 1 bridged Call here) are orange.
+The maximum Limit Session Limit here is 2000 in my case.
+
 ![Alt text](/freeswitch_graphs.png?raw=true "Example FreeSWITCH Cacti Graph")
+
+## Max Sessions changes on the fly
+
+Show current Settings:
+
+    [root@fsdev~]# fs_cli -x "fsctl max_sessions"
+    +OK max sessions: 2000
+
+Change current Settings:
+
+    [root@fsdev ~]# fs_cli -x "fsctl max_sessions 1000"
+    +OK max sessions: 1000
+
 
 ## FreeSWITCH MIBs thats intressting
 
